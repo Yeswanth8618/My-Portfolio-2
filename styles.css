@@ -1,0 +1,991 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: lightgoldenrodyellow;
+    /* background-color: #07e9f1c5; */
+    /* background-image: url('./pexels-lum3n-44775-167699.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;  */
+}
+
+header {
+    /* background-color: #4CAF50; */
+    color: #fff;
+    padding: 20px;
+}
+
+.profile-header {
+    text-align: center;
+    /* background-color: lightgoldenrodyellow; */
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 330px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* @keyframes rotateTwice {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotateTwice 2s ease-in-out;
+} */
+/* Define the animation */
+@keyframes flipTwice {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(720deg); /* 2 full flips */
+    }
+}
+
+/* Apply the animation to the profile picture */
+.flip-animation {
+    animation: flipTwice 2s ease-in-out; /* Flip twice in 2 seconds */
+    transform-origin: center; /* Ensures the flip happens from the center of the image */
+}
+
+.intro {
+    margin-top: 20px;
+}
+
+.intro h1 {
+    margin: 0;
+    font-size: 4em;
+    color: rgb(245, 135, 9);
+}
+
+.intro p {
+    margin: 5px 0;
+    font-size: 1.5em;;
+    color: #63f1e5f5;
+    text-align: justify;
+}
+#ip{
+    text-align: center;
+    font-size: 2em;
+    color: greenyellow;
+}
+/* Skills and Education Section */
+#skills-education {
+    padding: 20px;
+}
+
+#skills {
+    /* background-color: #fff; */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(211, 211, 211, 0.466);
+}
+
+#skills h2 {
+    margin-top: 0;
+    margin-left: 120px;
+    
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.skill-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* #education {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#education h2 {
+    margin-top: 0;
+}
+
+.education-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-node {
+    position: relative;
+    margin: 10px 0;
+}
+
+.education-degree {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.education-line {
+    width: 2px;
+    height: 20px;
+    background-color: #15e41c;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+} */
+#education {
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    background-color: rgba(119, 136, 153, 0.418);
+    font-family: Arial, sans-serif;
+}
+
+#education h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.education-tree {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 20px;
+    border-left: 2px solid #333;
+}
+
+.education-node {
+    position: relative;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+.education-degree {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-degree h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #555;
+}
+
+.education-degree p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #777;
+}
+
+.education-line {
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+    margin-left: 29px; /* Aligns with the border-left of .education-tree */
+}
+
+/* .education-node::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -23px;
+    width: 12px;
+    height: 12px;
+    background-color: #8486ee;
+    border-radius: 50%;
+} */
+/* .education-node::before {
+    content: '\2605'; 
+    position: absolute;
+    top: 10px; 
+    left: -28px; 
+    font-size: 18px; 
+    color: #f39c12; 
+} */
+.education-node::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Adjusts the vertical position */
+    left: -39px; /* Positions the image horizontally relative to the education node */
+    width: 40px; /* Sets the width of the image */
+    height: 40px; /* Sets the height of the image */
+    background-image: url('./education_cap_graduate_award_icon_149711.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire area */
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px;
+}
+
+#projects h2 {
+    margin-top: 0;
+    margin-left: 110px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(176, 196, 222, 0.329);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-image {
+    width: 180px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-details h3 {
+    margin-top: 0;
+}
+
+.project-details a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-details a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+/* #contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-wrap: wrap; 
+}
+
+.left-side, .right-side {
+    flex: 1 1 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.glowing-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00, 0 0 40px #ff8c00, 0 0 50px #ff8c00;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00, 0 0 40px #ff8c00, 0 0 50px #ff8c00;
+    }
+    100% {
+        box-shadow: 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ffa500, 0 0 60px #ffa500;
+    }
+}
+
+.right-side {
+    flex-direction: column;
+}
+
+.chat-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.chat-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chat-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ff8c00;
+    }
+    100% {
+        background-color: #ffa500;
+    }
+}
+
+#send-button:active {
+    background-color: #ff6600;
+}
+
+
+@media (max-width: 768px) {
+    #contact-section {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .glowing-image {
+        max-width: 200px;
+    }
+
+    .chat-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .glowing-image {
+        max-width: 150px;
+    }
+
+    #send-button {
+        font-size: 16px;
+    }
+
+    #chat-form textarea {
+        height: 80px;
+    }
+} */
+/* #contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-wrap: wrap; 
+}
+
+.left-side, .right-side {
+    flex: 1 1 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.glowing-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00, 0 0 40px #ff8c00, 0 0 50px #ff8c00;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00, 0 0 40px #ff8c00, 0 0 50px #ff8c00;
+    }
+    100% {
+        box-shadow: 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ffa500, 0 0 60px #ffa500;
+    }
+}
+
+.right-side {
+    flex-direction: column;
+}
+
+.chat-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.chat-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chat-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ff8c00;
+    }
+    100% {
+        background-color: #ffa500;
+    }
+}
+
+#send-button:active {
+    background-color: #ff6600;
+}
+
+
+@media (max-width: 1024px) {
+    .glowing-image {
+        max-width: 208px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #contact-section {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .glowing-image {
+        max-width: 200px;
+    }
+
+    .chat-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .glowing-image {
+        max-width: 150px;
+    }
+
+    #send-button {
+        font-size: 16px;
+    }
+
+    #chat-form textarea {
+        height: 80px;
+    }
+} */
+/* #contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-wrap: wrap; 
+}
+
+.left-side, .right-side {
+    flex: 1 1 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.glowing-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    
+    animation: zoom 3s infinite alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.1); 
+    }
+}
+
+.right-side {
+    flex-direction: column;
+}
+
+.chat-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f7ce99;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.chat-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chat-form textarea {
+
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00eeff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #00ffff63;
+    }
+    100% {
+        background-color: #00ffff;
+    }
+}
+
+#send-button:active {
+    background-color: #ff6600;
+}
+ */
+/* Media Query for Laptops */
+/* @media (max-width: 1024px) {
+    .glowing-image {
+        max-width: 200px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #contact-section {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .glowing-image {
+        max-width: 200px;
+    }
+
+    .chat-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .glowing-image {
+        max-width: 150px;
+    }
+
+    #send-button {
+        font-size: 16px;
+    }
+
+    #chat-form textarea {
+        height: 80px;
+    }
+} */
+/* #contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 120vh;
+    background-color:lightgoldenrodyellow;
+    flex-wrap: wrap; 
+}
+
+.left-side, .right-side {
+    flex: 1 1 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.glowing-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+   
+    animation: zoom 3s infinite alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.1); 
+    }
+}
+
+.right-side {
+    flex-direction: column;
+}
+
+.chat-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #545455;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.chat-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#chat-form textarea {
+    width: calc(100% - 20px); 
+    height: 80px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    box-sizing: border-box; 
+}
+
+#send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ff8c00;
+    }
+    100% {
+        background-color: #ffa500;
+    }
+}
+
+#send-button:active {
+    background-color: #00ffea;
+}
+
+
+@media (max-width: 1024px) {
+    .glowing-image {
+        max-width: 250px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #contact-section {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .glowing-image {
+        max-width: 200px;
+    }
+
+    .chat-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .glowing-image {
+        max-width: 150px;
+    }
+
+    #send-button {
+        font-size: 16px;
+    }
+
+    #chat-form textarea {
+        height: 60px;
+        width: calc(100% - 20px); 
+    }
+} */
+/* General styles for the contact section */
+#contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 120vh;
+    background-color: lightgoldenrodyellow;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Styles for the left and right sides */
+.left-side, .right-side {
+    flex: 1 1 50%; /* Flex-grow, flex-shrink, flex-basis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Glowing image styles */
+.glowing-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    /* Animation for zoom effect */
+    animation: zoom 3s infinite alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    100% {
+        transform: scale(1.1); /* Slightly zoomed in */
+    }
+}
+
+/* Styles for the chat box */
+.chat-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #545455;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
+.chat-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Form styles inside the chat box */
+.chat-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
+/* Input fields and textarea styles */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+    font-size: 16px;
+}
+
+textarea {
+    height: 80px; /* Default height */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Placeholder text styles */
+input::placeholder, textarea::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+/* Submit button styles */
+button {
+    padding: 10px;
+    background-color: #ff8c00; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: blink 1s infinite alternate; /* Blinking animation */
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ff8c00;
+    }
+    100% {
+        background-color: #ffa500;
+    }
+}
+
+button:active {
+    background-color: #00ffea; /* Color on button click */
+}
+
+/* Media Query for laptops */
+@media (max-width: 1024px) {
+    .glowing-image {
+        max-width: 250px; /* Reduce width and height for tablets */
+    }
+}
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 768px) {
+    #contact-section {
+        flex-direction: column;
+        padding: 20px;
+        height: auto; /* Adjust height */
+    }
+
+    .left-side, .right-side {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .glowing-image {
+        max-width: 200px; /* Further reduce width for smaller screens */
+    }
+
+    .chat-box {
+        max-width: 100%;
+    }
+}
+
+/* Media Query for very small screens (e.g., smartphones) */
+@media (max-width: 480px) {
+    .glowing-image {
+        max-width: 150px; /* Further reduce width */
+    }
+
+    button {
+        font-size: 16px; /* Smaller font size for small screens */
+    }
+
+    textarea {
+        height: 60px; /* Further reduced height */
+        width: calc(100% - 20px); /* Adjust width to maintain padding */
+    }
+}
+
+footer {
+    background-color: white;
+
+    color: #070707;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #0616f7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
